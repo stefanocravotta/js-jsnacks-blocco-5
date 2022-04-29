@@ -25,22 +25,25 @@ const biciDaCorsa = [
 
 const container = document.getElementById('container');
 
-const pesoBici = [];
+let weight = biciDaCorsa[0].peso;
+let biciLeggera = {};
 
 for(let bici of biciDaCorsa){
-    
-    pesoBici.push(bici.peso)
-    
+
+    const {peso} = bici;
+
+    if(weight > peso){
+        weight = peso;
+        biciLeggera = bici;
+    }
+  
 }
 
- const biciLeggera = Math.min.apply(Math, pesoBici);
-
- console.log(biciLeggera);
- stampa(biciDaCorsa)
+stampa(biciLeggera);
 
 function stampa(bici){
 
-    const{peso, nome} = bici
+    const {nome,peso} = bici;
 
     container.innerHTML = `La bicicletta che pesa di meno è ${nome} di ${peso} kg ` 
 } 

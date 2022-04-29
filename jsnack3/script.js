@@ -5,9 +5,6 @@ Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (
 
 const stringa = 'Ciao sono Simbad il Marinaio'
 
+const parolaGirata = (stringa) => stringa.split('').reverse().join('');
+
 console.log(parolaGirata(stringa));
-
-
-function parolaGirata(stringa){
-   return stringa.split('').reverse().join('');
-}

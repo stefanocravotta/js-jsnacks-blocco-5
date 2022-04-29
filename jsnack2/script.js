@@ -60,7 +60,7 @@ const zucchineCorte = [];
 const zucchineLunghe = [];
 
 for(let key of zucchina){
-    const splitZucchine = (key.lunghezza <= 15) ? zucchineCorte.push(key) : zucchineLunghe.push(key);
+    (key.lunghezza <= 15) ? zucchineCorte.push(key) : zucchineLunghe.push(key);
 }
 
 console.log(zucchineCorte);
